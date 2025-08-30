@@ -3,7 +3,6 @@ const app = express();
 const mongose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const crypto = require("crypto");
 const { default: mongoose } = require("mongoose");
 
 require("dotenv").config();
@@ -47,7 +46,6 @@ app.get("/", (req, res) => {
 
 require("./models/contactModel");
 require("./models/userModel");
-const contact = mongose.model("Contacts");
 const user = mongose.model("User");
 
 function generateAccessToken(id) {
